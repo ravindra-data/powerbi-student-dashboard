@@ -4,6 +4,12 @@ An interactive Power BI dashboard for tracking student academic performance, att
 
 ---
 
+## 🖼️ Dashboard Preview
+
+![Student Performance Dashboard](screenshots/dashboard.png)
+
+---
+
 ## 📌 Project Overview
 
 | Property | Details |
@@ -12,11 +18,47 @@ An interactive Power BI dashboard for tracking student academic performance, att
 | File | Student_Performance_Dashboard.pbix |
 | Student | Ravindra Kumar |
 | GR ID | 11638 |
+| Total Students | 1,000 |
 | Total Tables | 5 (3 Fact + 1 Dimension + 1 Measures) |
 | Schema Type | Star Schema |
 | Report Pages | 2 (Dashboard, Student Profile) |
 | Total Visuals | 12 charts/tables/cards + 4 slicers + shapes & buttons |
 | DAX Measures | 11 |
+
+---
+
+## 📈 Key Metrics (Dashboard)
+
+| KPI | Value |
+|---|---|
+| 🎓 Total Students | 1,000 |
+| ✅ Attendance | 90.05% |
+| ⭐ Average Score | 49.87% |
+
+### Average Score per Subject
+| Subject | Avg Score |
+|---|---|
+| Math | 50.78% |
+| Science | 49.96% |
+| English | 49.82% |
+| History | 49.55% |
+| Geography | 49.24% |
+
+### Behaviour by Type
+| Behaviour Type | Share |
+|---|---|
+| Disruptive | 20.51% |
+| Helpful | 20.03% |
+| Absent without notice | 19.98% |
+| Participative | 19.91% |
+| Late | 19.57% |
+
+### Score Trend by Term
+| Term | Avg Score |
+|---|---|
+| Term 3 | 50.26% |
+| Term 1 | 49.73% |
+| Term 2 | 49.62% |
 
 ---
 
@@ -44,8 +86,8 @@ An interactive Power BI dashboard for tracking student academic performance, att
 ### 📝 Scores (Fact Table)
 | Column | Description |
 |---|---|
-| Subject | Subject name |
-| Term | Term (e.g. Term 1, Term 2) |
+| Subject | Subject name — Math / Science / English / History / Geography |
+| Term | Term 1 / Term 2 / Term 3 |
 | Score | Marks obtained |
 
 ### ✅ Attendance (Fact Table)
@@ -59,7 +101,7 @@ An interactive Power BI dashboard for tracking student academic performance, att
 | Column | Description |
 |---|---|
 | Date | Date of behaviour incident |
-| BehaviorType | Type/category of behaviour |
+| BehaviorType | Disruptive / Late / Helpful / Participative / Absent without notice |
 | Notes | Additional notes or remarks |
 
 ---
@@ -88,7 +130,7 @@ An interactive Power BI dashboard for tracking student academic performance, att
 | Behavior Count per Type | Count of behaviour entries grouped by BehaviorType |
 | Subjects Count | Distinct count of subjects per student |
 | Performance | Score/label used in the Top Students table |
-| Performance Category | Categorical rating (e.g. Excellent / Good / Needs Improvement) |
+| Performance Category | Categorical rating (Excellent / Good / Needs Improvement) |
 | Student Class | Selected student's class — shown on the Profile card |
 | Student Section | Selected student's section — shown on the Profile card |
 
@@ -104,7 +146,7 @@ An interactive Power BI dashboard for tracking student academic performance, att
 | Average Score per Subject | Clustered Column Chart | Subject (axis), Average Score per Subject (value) |
 | Behaviour by Type | Donut Chart | BehaviorType (legend), Behavior Count per Type (value) |
 | Top Students | Table | Name, Subject, % Score, Attendance %, Performance |
-| KPI Cards (×3) | Card | Total Students · Attendance % · Average Score per Subject |
+| KPI Cards (×3) | Card | Total Students · Attendance % · Avg Score |
 | Slicers (×4) | Slicer | Class · Section · Subject · Term |
 | Text Boxes (×2) | Text Box | Titles / labels |
 
